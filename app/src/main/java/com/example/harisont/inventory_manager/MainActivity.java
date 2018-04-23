@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton fab;
 
-    ArrayList<String> products;
+    ArrayList<Product> products;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         products = new ArrayList<>();
-        products.add("Raspberry Pi 3 B");
+        Product product = new Product(1, "Raspberry Pi 3 model B", "Last model", Float.parseFloat("40"), Integer.parseInt("70"));
+        products.add(product);
 
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
