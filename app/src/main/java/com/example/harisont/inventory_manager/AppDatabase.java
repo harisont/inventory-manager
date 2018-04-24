@@ -3,7 +3,7 @@ package com.example.harisont.inventory_manager;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.RoomDatabase;
 
-@Database(entities = Product.class, version = 1)
+@Database(entities = Product.class, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract ProductDao productDao();
 }
