@@ -29,9 +29,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     public void onBindViewHolder(@NonNull ProductAdapter.ViewHolder holder, int position) {
         holder.productName.setText(products.get(position).getmName());                              // Uhm what's happening here?
         holder.description.setText(products.get(position).getmDescription());
-        //int priceString = ((int) products.get(position).getmPrice());
-        //holder.price.setText(priceString);                                                          //float can't be converted to strings :(
-        //holder.quantity.setText(products.get(position).getmQuantity());
+        holder.price.setText("Price: " + Float.toString(products.get(position).getmPrice()) + "$");
+        holder.quantity.setText("Available: " + Integer.toString(products.get(position).getmQuantity()));
     }
 
     @Override

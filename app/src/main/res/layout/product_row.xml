@@ -7,26 +7,28 @@
 
     <TextView
         android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/product_name"/>
 
     <TextView
-        android:textSize="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/description"/>
 
     <TextView
-        android:textColor="@color/colorAccent"
-        android:textSize="10dp"
-        android:layout_width="match_parent"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/price"/>
 
     <TextView
-        android:textSize="10dp"
-        android:layout_width="match_parent"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/quantity"/>
 </LinearLayout>
