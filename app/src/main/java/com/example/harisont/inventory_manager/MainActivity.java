@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         products = new ArrayList<>();
-        Product product = new Product(1, "Raspberry Pi 3 model B", "Last model", Float.parseFloat("40"), Integer.parseInt("70"));
+        Product product = new Product("Raspberry Pi 3 model B", "Last model", Float.parseFloat("40"), Integer.parseInt("70"));
         products.add(product);
 
         recyclerView = findViewById(R.id.recycler_view);
@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ProductAdapter(products);
         recyclerView.setAdapter(adapter);
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);                                         //No need to cast explicitly in Android O
+        fab = findViewById(R.id.fab);                                                               //No need to cast explicitly in Android O
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, AddProduct.class));         //switch to AddProduct on fab clicked
+                startActivity(new Intent(MainActivity.this, AddProduct.class));        //switch to AddProduct on fab clicked
             }
         });
     }

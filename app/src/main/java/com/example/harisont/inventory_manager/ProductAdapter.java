@@ -27,10 +27,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ProductAdapter.ViewHolder holder, int position) {
         holder.productName.setText(products.get(position).getmName());                              // Uhm what's happening here?
-        holder.description.setText(products.get(position).getmDescription());
-        int priceString = ((int) products.get(position).getmPrice());
-        holder.price.setText(priceString);                                                          //float can't be converted to strings :(
-        holder.quantity.setText(products.get(position).getmQuantity());
+        //holder.description.setText(products.get(position).getmDescription());
+        //int priceString = ((int) products.get(position).getmPrice());
+        //holder.price.setText(priceString);                                                          //float can't be converted to strings :(
+        //holder.quantity.setText(products.get(position).getmQuantity());
     }
 
     @Override

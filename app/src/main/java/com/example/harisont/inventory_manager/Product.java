@@ -23,7 +23,7 @@ public class Product {
     @ColumnInfo(name = "quantity")
     private int mQuantity;
 
-    public Product(int mId, String mName, String mDescription, float mPrice, int mQuantity) {
+    public Product(String mName, String mDescription, float mPrice, int mQuantity) {
         this.mId = mId;
         this.mName = mName;
         this.mDescription = mDescription;
