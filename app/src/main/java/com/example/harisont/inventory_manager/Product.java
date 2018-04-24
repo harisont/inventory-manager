@@ -3,25 +3,24 @@ package com.example.harisont.inventory_manager;
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
 
 @Entity(tableName = "product_table")
 public class Product {
 
     @PrimaryKey(autoGenerate = true)
-    private int mId;
+    protected int mId;
 
     @ColumnInfo(name = "name")
-    private String mName;
+    protected String mName;
 
     @ColumnInfo(name = "description")
-    private String mDescription;
+    protected String mDescription;
 
     @ColumnInfo(name = "price")
-    private float mPrice;
+    protected float mPrice;
 
     @ColumnInfo(name = "quantity")
-    private int mQuantity;
+    protected int mQuantity;
 
     public Product(String mName, String mDescription, float mPrice, int mQuantity) {
         this.mId = mId;

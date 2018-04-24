@@ -1,5 +1,6 @@
 package com.example.harisont.inventory_manager;
 
+import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton fab;
 
-    ArrayList<Product> products;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        products = new ArrayList<>();
-        Product product = new Product("Raspberry Pi 3 model B", "Last model", Float.parseFloat("40"), Integer.parseInt("70"));
-        products.add(product);
-
+        AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "production")
+                .allowMainThreadQueries()                                                           /*worst practice*/
+                .build();
+        List<Product> products = db.productDao().getAllProducts();
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new ProductAdapter(products);
