@@ -1,34 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="12dp">
-
-    <TextView
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorAccent"
-        android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="230sp"
         android:layout_height="wrap_content"
-        android:id="@+id/product_name"/>
+        android:padding="12dp">
 
-    <TextView
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/description"/>
+        <TextView
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_name"/>
 
-    <TextView
-        android:textSize="15dp"
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"/>
+
+        <TextView
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/price"/>
+
+        <TextView
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/quantity"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/minus"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/price"/>
+        android:layout_height="match_parent"
+        android:text="-"
+        android:textColor="#FFFF"
+        android:textSize="35sp" />
 
-    <TextView
-        android:textSize="15dp"
+    <Button
+        android:id="@+id/plus"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/quantity"/>
+        android:layout_height="match_parent"
+        android:text="+"
+        android:textColor="#FFFF"
+        android:textSize="35sp" />
 </LinearLayout>
