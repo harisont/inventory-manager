@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AddProduct extends AppCompatActivity {
 
@@ -39,12 +40,16 @@ public class AddProduct extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Product product = new Product(
+                try {
+                    Product product = new Product(
                         productName.getText().toString(),
                         description.getText().toString(),
                         Float.parseFloat(price.getText().toString()),
                         Integer.parseInt(quantity.getText().toString()));
-                db.productDao().insertAll(product);
+                    db.productDao().insertAll(product);
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(), "Invalid input", Toast.LENGTH_SHORT).show();
+                }
                 startActivity(new Intent(AddProduct.this, MainActivity.class));
             }
         });

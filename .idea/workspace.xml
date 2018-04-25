@@ -66,9 +66,12 @@
       <file leaf-file-name="AddProduct.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harisont/inventory_manager/AddProduct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="31" column="45" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="609">
+              <caret line="50" column="104" lean-forward="false" selection-start-line="50" selection-start-column="104" selection-end-line="50" selection-end-column="104" />
+              <folding>
+                <element signature="e#1368#2116#0" expanded="true" />
+                <element signature="e#2115#2116#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2546,7 +2549,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
           <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="e#1368#2116#0" expanded="true" />
+            <element signature="e#2115#2116#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2642,7 +2648,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
           <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="e#1368#2116#0" expanded="true" />
+            <element signature="e#2115#2116#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2692,7 +2701,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="76" lean-forward="false" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="76" />
-          <folding />
+          <folding>
+            <element signature="e#1368#2116#0" expanded="true" />
+            <element signature="e#2115#2116#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2931,9 +2943,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/harisont/inventory_manager/AddProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="31" column="45" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="609">
+          <caret line="50" column="104" lean-forward="false" selection-start-line="50" selection-start-column="104" selection-end-line="50" selection-end-column="104" />
+          <folding>
+            <element signature="e#1368#2116#0" expanded="true" />
+            <element signature="e#2115#2116#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
