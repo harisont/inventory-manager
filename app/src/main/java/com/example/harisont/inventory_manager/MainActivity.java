@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
 
+    SwipeRefreshLayout srl;
+
     FloatingActionButton fab;
     public static AppDatabase db;
 
@@ -42,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new ProductAdapter(products);
         recyclerView.setAdapter(adapter);
+
+        srl = findViewById(R.id.swipeRefreshLayout);
+        srl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                // TODO: add on refresh action
+            }
+        });
 
         fab = findViewById(R.id.fab);                                                               //No need to cast explicitly in Android O
         fab.setOnClickListener(new View.OnClickListener() {
