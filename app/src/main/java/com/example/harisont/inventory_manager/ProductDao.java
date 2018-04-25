@@ -20,4 +20,7 @@ public interface ProductDao {
 
     @Query("UPDATE product_table SET quantity = quantity - 1 WHERE mId = :id")
     void decreaseQuantity(int id);
+
+    @Update
+    void updateProducts(Product... products);
 }
