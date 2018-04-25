@@ -29,7 +29,7 @@ public class AddProduct extends AppCompatActivity {
         productName = findViewById(R.id.product_name);
         description = findViewById(R.id.description);
         price = findViewById(R.id.price);
-        quantity = findViewById(R.id.price);
+        quantity = findViewById(R.id.quantity);
         button = findViewById(R.id.button);
 
         final AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "production")
