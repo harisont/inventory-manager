@@ -38,9 +38,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         holder.minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.db.productDao().decreaseQuantity(products.get(position).getmId());
-                products.get(position).updateQuantity();
-                holder.quantity.setText("Available: " + Integer.toString(products.get(position).getmQuantity()));
+                if (products.get(position).getmQuantity() > 0) {
+                    MainActivity.db.productDao().decreaseQuantity(products.get(position).getmId());
+                    products.get(position).updateQuantity();
+                    holder.quantity.setText("Available: " + Integer.toString(products.get(position).getmQuantity()));
+                }
             }
         });
         holder.plus.setOnClickListener(new View.OnClickListener() {
