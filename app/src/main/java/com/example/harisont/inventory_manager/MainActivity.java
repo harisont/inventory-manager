@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
 
-    SwipeRefreshLayout srl;
-
     FloatingActionButton fab;
     public static AppDatabase db;
 
@@ -45,15 +43,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new ProductAdapter(products);
         recyclerView.setAdapter(adapter);
-
-        srl = findViewById(R.id.swipeRefreshLayout);
-        srl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                // TODO: add working on refresh action
-                adapter.notifyDataSetChanged();
-            }
-        });
 
         fab = findViewById(R.id.fab);                                                               //No need to cast explicitly
         fab.setOnClickListener(new View.OnClickListener() {
