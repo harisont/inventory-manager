@@ -50,11 +50,12 @@ public class MainActivity extends AppCompatActivity {
         srl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                // TODO: add on refresh action
+                // TODO: add working on refresh action
+                adapter.notifyDataSetChanged();
             }
         });
 
-        fab = findViewById(R.id.fab);                                                               //No need to cast explicitly in Android O
+        fab = findViewById(R.id.fab);                                                               //No need to cast explicitly
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
