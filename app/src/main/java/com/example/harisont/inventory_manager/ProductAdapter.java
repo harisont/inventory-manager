@@ -39,6 +39,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             @Override
             public void onClick(View v) {
                 MainActivity.db.productDao().decreaseQuantity(products.get(position).getmId());
+                products.get(position).updateQuantity();
                 holder.quantity.setText("Available: " + Integer.toString(products.get(position).getmQuantity()));
             }
         });
@@ -46,6 +47,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             @Override
             public void onClick(View v) {
                 MainActivity.db.productDao().increaseQuantity(products.get(position).getmId());
+                products.get(position).updateQuantity();
                 holder.quantity.setText("Available: " + Integer.toString(products.get(position).getmQuantity()));
             }
         });

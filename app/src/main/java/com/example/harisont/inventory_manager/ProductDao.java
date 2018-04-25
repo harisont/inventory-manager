@@ -21,6 +21,18 @@ public interface ProductDao {
     @Query("UPDATE product_table SET quantity = quantity - 1 WHERE mId = :id")
     void decreaseQuantity(int id);
 
+    @Query("SELECT name FROM product_table WHERE mId = :id")
+    String getNameById(int id);
+
+    @Query("SELECT description FROM product_table WHERE mId = :id")
+    String getDescriptionById(int id);
+
+    @Query("SELECT price FROM product_table WHERE mId = :id")
+    float getPriceById(int id);
+
+    @Query("SELECT quantity FROM product_table WHERE mId = :id")
+    int getQuantityById(int id);
+
     @Update
     void updateProducts(Product... products);
 }

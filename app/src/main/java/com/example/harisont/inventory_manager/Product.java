@@ -30,6 +30,28 @@ public class Product {
         this.mQuantity = mQuantity;
     }
 
+    void foo(String a, Integer b, Integer c) {
+        b = b != null ? b : 0;
+        c = c != null ? c : 0;
+        //...
+    }
+
+    public void updateName() {
+        this.mName = MainActivity.db.productDao().getNameById(this.mId);
+    }
+
+    public void updateDescription() {
+        this.mDescription = MainActivity.db.productDao().getDescriptionById(this.mId);
+    }
+
+    public void updatePrice() {
+        this.mPrice = MainActivity.db.productDao().getPriceById(this.mId);
+    }
+
+    public void updateQuantity() {
+        this.mQuantity = MainActivity.db.productDao().getQuantityById(this.mId);
+    }
+
     public int getmId() {
         return mId;
     }
